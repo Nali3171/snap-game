@@ -13,16 +13,16 @@ public class Card {
             return suit;
         }
         public String getSymbol(){
-            return symbol;
-        }
-        public int getValue(){
-            return value;
+    return symbol;
+       }
+       public int getValue(){
+   return value;
         }
 
         //add a method called toString()
-      //  public String toString(){
-     //       return symbol + " of "+ suit;
-      //  }
+       public String toString(){
+           return symbol + " of "+ suit;
+        }
 
     }
 
