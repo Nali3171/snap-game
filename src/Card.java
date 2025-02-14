@@ -1,14 +1,15 @@
 public class Card {
-        String suit;
-        String symbol;
-        int value;
+        private String suit;
+        private String symbol;
+        private int value;
+
 
         public Card(String suit, String symbol, int value){
             this.suit = suit;
             this.symbol = symbol;
             this.value = value;
         }
-        // Add getters here:
+        // get
     public String getSuit(){
             return suit;
         }
@@ -19,7 +20,7 @@ public class Card {
    return value;
         }
 
-        //add a method called toString()
+        //method called toString()
        public String toString(){
            return symbol + " of "+ suit;
         }
