@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CardGame {
-    private ArrayList<Card> deckOfCards;
+     final ArrayList<Card> deckOfCards;
     private String name;
 
 
@@ -62,7 +62,7 @@ void createDeck(){
     public ArrayList<Card> sortDeckIntoNumbers(){
         Collections.sort(deckOfCards, (c1, c2) -> Integer.compare(c1.getValue(), c2.getValue()));
         return deckOfCards;
-    }
+    }//trying as a lambda function
 
     //sortDeckIntoSuits method
     public ArrayList<Card> sortDeckIntoSuits(){

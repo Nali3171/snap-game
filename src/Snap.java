@@ -22,10 +22,9 @@ public class Snap extends CardGame{
 
         System.out.println("Welcome to Nazrins's Snap Game! Please press Enter to get a card.");
 
-        boolean gameRunning = true;
-        while (gameRunning && !deckOfCards.isEmpty()) {
+        while (!deckOfCards.isEmpty()) {
             System.out.println(player1.getName() + "'s turn. Press Enter to draw a card.");
-            scanner.nextLine(); // Wait for player to press enter
+            scanner.nextLine();
 
             takeTurn(player1); // Player 1's turn
 
@@ -44,9 +43,10 @@ public class Snap extends CardGame{
             if (checkSnap()) {
                 System.out.println("SNAP! " + player2.getName() + " wins!");
                 return;
-            }
-        }    System.out.println("Game over! No more cards.");
-    }
+            }//switching between player, bulk of game
+        }    System.out.println("Game over!");
+    }//game over
+
     private void takeTurn(Player player) {
         Card dealtCard = dealCard();
         if (dealtCard != null) {
@@ -57,7 +57,7 @@ public class Snap extends CardGame{
 
     private boolean checkSnap() {
         return previousCard != null && deckOfCards.size() > 0 &&
-                previousCard.getSymbol().equals(deckOfCards.get(0).getSymbol());
+                previousCard.getSymbol().equals(deckOfCards.getFirst().getSymbol());
     }
 
     public void snap(Player player) {
