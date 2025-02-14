@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CardGame {
-    private ArrayList<String> deckOfCards;
+    private ArrayList<Card> deckOfCards;
     private String name;
 
 
@@ -14,17 +14,38 @@ public class CardGame {
     public CardGame(String name) {
         this.deckOfCards = new ArrayList<>();
         this.name = name;
+        createDeck();
     }
 
-//Make methods
+//Methods below here
 
 //method for making deck
     private void createDeck(){
         for (String suit : Suits){
-            for(int i = 0; i < Symbols.length; i++){
-               int value = i + 2;
-               deckOfCards.add(String.valueOf(new Card(suit,Symbols[i], value)));
+            for (String symbol : Symbols) {
+                int value = getValueFromSymbol(symbol);
+                deckOfCards.add(new Card(suit, symbol, value));
+
             }
+        }
+    }
+    // Get numeric value from the symbol
+    private int getValueFromSymbol(String symbol) {
+        switch (symbol) {
+            case "2": return 2;
+            case "3": return 3;
+            case "4": return 4;
+            case "5": return 5;
+            case "6": return 6;
+            case "7": return 7;
+            case "8": return 8;
+            case "9": return 9;
+            case "10": return 10;
+            case "J": return 11;
+            case "Q": return 12;
+            case "K": return 13;
+            case "A": return 14;
+            default: return 0;
         }
     }
 
@@ -55,6 +76,11 @@ public class CardGame {
         return deckOfCards;
     }
 
+    //shuffledeck method
+    public ArrayList<Card> shuffleDeck(){
+        Collections.shuffle(deckOfCards);
+        return deckOfCards;
+    }
 
 
 
