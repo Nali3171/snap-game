@@ -10,14 +10,14 @@ public class Card {
             this.value = value;
         }
         // get
-    public String getSuit(){
+        public String getSuit(){
             return suit;
         }
         public String getSymbol(){
-    return symbol;
+        return symbol;
        }
        public int getValue(){
-   return value;
+       return value;
         }
 
         //method called toString()

@@ -50,7 +50,7 @@ public class CardGame {
     }
 
     //method for dealing card from top of deck
-    public String dealCard(){
+    public Card dealCard(){
         if (deckOfCards.isEmpty()){
             System.out.println("No more cards to deal");
             return null;
@@ -59,19 +59,19 @@ public class CardGame {
     }
 
     //sortDeckIntoNumbers() method here - use lambda operator to make it simpler
-    public ArrayList<String> sortDeckIntoNumbers(){
-        Collections.sort((c1, c2) -> Integer.compare(c1.getValue(), c2.getValue()));
+    public ArrayList<Card> sortDeckIntoNumbers(){
+        Collections.sort(deckOfCards, (c1, c2) -> Integer.compare(c1.getValue(), c2.getValue()));
         return deckOfCards;
     }
 
     //sortDeckIntoSuits method
     public ArrayList<Card> sortDeckIntoSuits(){
-        Collections.sort(deckOfCards, (card1, card2) ->{
-            int compareSuit = card1.getSuit().compareTo(card2.getSuit());
+        Collections.sort(deckOfCards, (c1, c2) -> {
+            int compareSuit = c1.getSuit().compareTo(c2.getSuit());
             if (compareSuit != 0){
                 return compareSuit;
             }
-            return Integer.compare(card1.getValue(), card2.getValue());
+            return Integer.compare(c1.getValue(), c2.getValue());
         });
         return deckOfCards;
     }
