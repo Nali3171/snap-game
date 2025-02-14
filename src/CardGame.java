@@ -76,7 +76,7 @@ void createDeck(){
         return deckOfCards;
     }
 
-    //shuffledeck method
+    //shuffle deck method
     public ArrayList<Card> shuffleDeck(){
         Collections.shuffle(deckOfCards);
         return deckOfCards;

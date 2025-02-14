@@ -33,5 +33,10 @@ public class main {
         Card card = new Card("♥", "A", 14);
         System.out.println(card);
 
+        //trying out snap game
+        Snap snapGame = new Snap("Snap Game");
+
+        snapGame.startGame();
+
     }
 }
