@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CardGame {
     private ArrayList<String> deckOfCards;
@@ -35,6 +36,25 @@ public class CardGame {
         }
         return deckOfCards.removeFirst();
     }
+
+    //sortDeckIntoNumbers() method here - use lambda operator to make it simpler
+    public ArrayList<String> sortDeckIntoNumbers(){
+        Collections.sort((c1, c2) -> Integer.compare(c1.getValue(), c2.getValue()));
+        return deckOfCards;
+    }
+
+    //sortDeckIntoSuits method
+    public ArrayList<Card> sortDeckIntoSuits(){
+        Collections.sort(deckOfCards, (card1, card2) ->{
+            int compareSuit = card1.getSuit().compareTo(card2.getSuit());
+            if (compareSuit != 0){
+                return compareSuit;
+            }
+            return Integer.compare(card1.getValue(), card2.getValue());
+        });
+        return deckOfCards;
+    }
+
 
 
 
