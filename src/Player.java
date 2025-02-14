@@ -23,4 +23,7 @@ public class Player {
         }
         return null;
     }
+    public ArrayList<Card> getHand() {
+        return hand;
+    }
 }
