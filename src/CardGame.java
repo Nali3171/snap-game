@@ -20,7 +20,7 @@ public class CardGame {
 //Methods below here
 
 //method for making deck
-    private void createDeck(){
+void createDeck(){
         for (String suit : Suits){
             for (String symbol : Symbols) {
                 int value = getValueFromSymbol(symbol);
