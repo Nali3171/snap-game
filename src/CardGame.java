@@ -11,7 +11,7 @@ public class CardGame {
         this.name = name;
     }
 
-    private static final String[] Suits = {"Heart", "Spade","Club", "Diamond"}; //Array for suit
+    private static final String[] Suits = {"♥", "♠", "♦", "♣"}; //Array for suit
     private static final String[] Symbols = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"}; //array for symbol
 
 
@@ -29,4 +29,9 @@ public class CardGame {
 
 
 //method for getDeck()
+    public void getDeck(){
+        for(Card card : deckOfCards){
+            System.out.println(card);
+        }
+    }
 }
