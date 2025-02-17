@@ -1,8 +1,8 @@
 # snap-game
-This is simple 2-player game created with Java. Players take turns picking cards from a deck, if two cards have same symbol the player has to call "snap" to win!
+This is simple 2-player game created with Java. Players take turns picking cards from a deck, if two cards have same symbol the player has to type "snap" to win!
 
 ## How to Play Snap:
-- Run teh Game
+- Run the Game
 - Payer 1 and Player 2 take turns pressing enter to draw a card from the deck
 - if 2 cards have the same symbol the player should call snap
 - The game will end and player wins
@@ -12,7 +12,7 @@ This is simple 2-player game created with Java. Players take turns picking cards
 - 52 cards in a deck
 - shuffle and sort cards
 - snap when two players are competing
-- player can win bu calling Snap
+- player can win by calling Snap
 
 ## Classes:
   - Card
