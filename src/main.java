@@ -27,8 +27,6 @@ public class main {
         Card cardDeal = game.dealCard();
         System.out.println("\nDealt card : " + cardDeal); //works
 
-
-
 //initial test
         Card card = new Card("♥", "A", 14);
         System.out.println(card);

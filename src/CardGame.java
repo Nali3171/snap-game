@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CardGame {
-     final ArrayList<Card> deckOfCards;
+    final ArrayList<Card> deckOfCards;
     private String name;
 
 
@@ -17,7 +17,7 @@ public class CardGame {
         createDeck();
     }
 
-//Methods below here
+//Methods
 
 //method for making deck
 void createDeck(){
@@ -29,6 +29,7 @@ void createDeck(){
             }
         }
     }
+
     // Get numeric value from the symbol
     private int getValueFromSymbol(String symbol) {
         switch (symbol) {
@@ -49,7 +50,7 @@ void createDeck(){
         }
     }
 
-    //method for dealing card from top of deck
+    //Method for dealing card from top of deck
     public Card dealCard(){
         if (deckOfCards.isEmpty()){
             System.out.println("No more cards to deal");
@@ -83,8 +84,7 @@ void createDeck(){
     }
 
 
-
-//method for getDeck()
+    //method for getDeck()
     public void getDeck(){
         for(Card card : deckOfCards){
             System.out.println(card);
